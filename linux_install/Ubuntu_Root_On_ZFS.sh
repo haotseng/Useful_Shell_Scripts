@@ -376,6 +376,13 @@ update-grub
 #
 # Install the boot loader
 #
+# Choose one of below boot method
+# (1) For Legacy (BIOS) booting
+#grub-install $DISK1
+#grub-install $DISK2
+#grub-install $DISK3
+
+# (2) For EFI booting
 grub-install --target=x86_64-efi --efi-directory=/boot/efi \
     --bootloader-id=ubuntu --recheck --no-floppy
 
