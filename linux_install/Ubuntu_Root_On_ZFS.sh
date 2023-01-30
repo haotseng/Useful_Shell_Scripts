@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e 
-set -x
+#set -x
 
 #
 # 這個script 會自動建立 ubuntu ZFS system, 使用 raidz1, 不加密
@@ -314,6 +314,11 @@ mount /dev/disk/by-uuid/\${EFI_BLKID} /boot/efi
 #
 # Install GRUB/Linux/ZFS in the chroot environment for the new system
 #
+# Choose one of below boot method
+# (1) For Legacy (BIOS) booting
+#apt install --yes grub-pc linux-image-generic zfs-initramfs
+
+# (2) For EFI booting
 apt install --yes \
     grub-efi-amd64 grub-efi-amd64-signed linux-image-generic \
     shim-signed zfs-initramfs

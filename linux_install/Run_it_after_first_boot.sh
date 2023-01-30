@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e 
-set -x
+#set -x
 
 #
 # 在第一次boot 成功後, 請執行這個script, 以完成完整的安裝
