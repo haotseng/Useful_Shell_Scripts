@@ -3,4 +3,4 @@
 
 * linux_install : Ubuntu root file system on ZFS
 
-
+* ping_test : Ping ip address, and save it to log file.
