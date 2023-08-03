@@ -37,7 +37,7 @@ echo Ping %ip% , start time :  %date% %time% > "%log_file%"
 
 :loop
 
-REM Ping IP 並將第一行的輸出儲存為變數
+REM Ping IP 並將第二行的輸出儲存為變數
 set "count=0"
 for /f "delims=" %%i in ('ping -n 1 %ip%') do (
   set /a "count+=1"
